@@ -1,0 +1,15 @@
+{% extends 'admin.html.twig' %}
+
+{% block title %}New Blog{% endblock %}
+
+{% block body %}
+    <section class="padding">
+        <header class="split center">
+            <h1>Create new Blog</h1>
+            <a class="button ghost" href="{{ path('app_blog_index') }}">Back to list</a>
+        </header>
+        <div class="card-body">
+            {{ include('blog/_form.html.twig') }}
+        </div>
+    </section>
+{% endblock %}

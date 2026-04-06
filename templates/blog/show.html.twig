@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Blog{% endblock %}
+
+{% block body %}
+    <section class="layout-readable stack" style="--gap: 1rem;">
+        <nav class="breadcrumbs fs-xs" aria-label="Breadcrumb">
+            <ul class="no-list">
+                <li><a href="{{ path('app_home') }}">Home</a></li>
+                <li aria-current="page">{{ blog.name }}</li>
+            </ul>
+        </nav>
+        <header class="split center">
+            <h1>{{ blog.name }}</h1>
+            <div class="cluster">
+                <a class="button ghost" href="{{ path('app_home') }}">Back to list</a>
+                <a class="button primary" href="{{ path('app_blog_edit', {'id': blog.id}) }}">Edit</a>
+            </div>
+        </header>
+
+        {% if blog.intro %}
+            <div class="card">
+                <div class="card-body">
+                    {{ blog.intro | markdown_to_html }}
+                </div>
+            </div>
+        {% endif %}
+        {{ blog.content | markdown_to_html }}
+    </section>
+{% endblock %}

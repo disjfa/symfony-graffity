@@ -1,0 +1,19 @@
+{{ form_start(form, {'attr': {'class': 'stack', 'style': '--gap: 1rem;'}}) }}
+    <section class="box stack">
+        <h2 class="no-margin">Content</h2>
+        {{ form_row(form.name) }}
+        {{ form_row(form.intro) }}
+        {{ form_row(form.content) }}
+    </section>
+
+    <section class="box stack">
+        <h2 class="no-margin">Publishing</h2>
+        <div class="grid auto">
+            {{ form_row(form.publish_date) }}
+        </div>
+    </section>
+
+    <div class="form-actions">
+        <button class="primary" type="submit">{{ button_label|default('Save') }}</button>
+    </div>
+{{ form_end(form) }}

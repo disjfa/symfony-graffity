@@ -1,0 +1,6 @@
+:root {
+}
+
+.padding {
+    padding: var(--pad-xl);
+}

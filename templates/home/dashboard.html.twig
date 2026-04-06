@@ -1,0 +1,24 @@
+{% extends 'admin.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+    <div class="padding">
+        <h1>Dashboard</h1>
+
+        <section class="layout-split">
+            <article class="stat-card"><small>Total Revenue</small> <strong>$48,250</strong>
+                <span class="tag success" style="margin-block-start: auto;">+12.5%</span>
+            </article>
+            <article class="stat-card"><small>Active Users</small> <strong>2,420</strong>
+                <span class="tag success" style="margin-block-start: auto;">+8.1%</span>
+            </article>
+            <article class="stat-card"><small>Conversion Rate</small> <strong>3.6%</strong>
+                <span class="tag error" style="margin-block-start: auto;">-0.4%</span>
+            </article>
+            <article class="stat-card"><small>Support Tickets</small> <strong>18</strong>
+                <span class="tag success" style="margin-block-start: auto;">Down 3 this week</span>
+            </article>
+        </section>
+    </div>
+{% endblock %}

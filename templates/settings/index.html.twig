@@ -1,0 +1,16 @@
+{% extends 'admin.html.twig' %}
+
+{% block title %}Hello SettingsController!{% endblock %}
+
+{% block body %}
+    <div class="padding">
+        {{ form_start(form) }}
+        <div class="stack">
+            {{ form_rest(form) }}
+            <button class="primary" type="submit" accesskey="s">
+                Save
+            </button>
+        </div>
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
